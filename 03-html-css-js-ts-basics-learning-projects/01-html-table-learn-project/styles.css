@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+table td {
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid blueviolet;
+  width: 100px;
+  height: 100px;
+}
