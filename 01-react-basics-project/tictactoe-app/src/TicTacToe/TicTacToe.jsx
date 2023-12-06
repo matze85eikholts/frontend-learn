@@ -5,11 +5,15 @@ const TicTacToe = () => {
   const [turn, setTurn] = useState('x');
   const [cells, setCells] = useState(Array(9).fill(''));
   const Cell = ({ num }) => {
-    return <td onClick={() => handleClick(num)}>-</td>;
+    return <td onClick={() => handleClick(num)}>{cells[num]}</td>;
   };
 
   const handleClick = (num) => {
     //alert(num);
+    if (cells[num] != '') {
+      alert('уже было кликнуто!'); // Защита от двойного клика
+      return;
+    }
     let squars = [...cells];
     if (turn === 'x') {
       squars[num] = 'x';
