@@ -1,0 +1,9 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.sub-container {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+}
